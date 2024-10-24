@@ -52,28 +52,28 @@ if __name__ == '__main__':
     print("Long Text Datasets: ")
     # Length of Shakespear 5458199
     file1 = open("Shakespear.txt", "r+")
-    T = file1.read()
-    P = input("Enter a string: ")
     print("Shake Spear")
+    T = file1.read()
+    P = input("Enter a string: ")
     call(T, P)
 
     # Length of bee movie 86091
     file1 = open("Bee_movie.txt", "r+")
+    print("Bee Movie")
     T = file1.read()
     P = input("Enter a string: ")
-    print("Bee Movie")
     call(T, P)
 
     # Length of bee movie 86091
     file1 = open("Bee_movie.txt", "r+")
+    print("Bee Movie")
     T = file1.read()
     P = input("Enter a string: ")
-    print("Bee Movie")
     call(T, P)
 
     # Length of bee movie 86091
     file3 = open("The Lottery.txt", "r+", encoding="utf-8")
+    print("The Lottery")
     T = file1.read()
     P = input("Enter a string: ")
-    print("The Lottery")
     call(T, P)
