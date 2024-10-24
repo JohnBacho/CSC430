@@ -17,63 +17,61 @@ def call(T, P):
     start = time.time()
     match = BruteForceStringMatch(T, P)
     end = time.time()
-
     print("Matches:", match, "\n")
+    print("# Matches:", len(match), "\n")
     print("Time: ", end - start)
 
 #############################################################################################################################
 
 if __name__ == '__main__':
-    T = "stringstrindstrindstrindstrind"
-    P = "string"
-    print("Match at Front")
-    call(T, P)
+    print("[0] Shakespear\n[1] Bee Movie\n[2] The Lottery")
+    type = input("Which dataset would you like to run? \nEnter an Int: ")
+    match type:
+        case '0':
+            print("\n*** running on shakespear dataset, Length = 5458199 ***")
+            print("Long Text Datasets: ")
+            file = open("Shakespear.txt", "r+")
+            print("Shakespear")
+            T = file.read()
+            P = input("Enter a string: ")
+            call(T, P)
+        case '1':
+            print("\n*** running bee movie script, Length = 86091 ***")
+            file = open("Bee_movie.txt", "r+")
+            print("Bee Movie")
+            T = file.read()
+            P = input("Enter a string: ")
+            call(T, P)
+        case '2':
+            print("\n*** running on The Lottery dataset, Length = 86091 ***")
+            file = open("The Lottery.txt", "r+", encoding="utf-8")
+            print("The Lottery")
+            T = file.read()
+            P = input("Enter a string: ")
+            call(T, P)
+        case _:
+            print("\n*** running default test cases ***")
+            T = "stringstrindstrindstrindstrind"
+            P = "string"
+            print("Match at Front")
+            call(T, P)
 
-    T = "strindstrindstrindstrindstring"
-    P = "string"
-    print("Match at End")
-    call(T, P)
+            T = "strindstrindstrindstrindstring"
+            P = "string"
+            print("Match at End")
+            call(T, P)
 
-    T = "strindstrindstringstrindstrind"
-    P = "string"
-    print("Match in Middle")
-    call(T, P)
+            T = "strindstrindstringstrindstrind"
+            P = "string"
+            print("Match in Middle")
+            call(T, P)
 
-    T = "stringstringstringstringstring"
-    P = "string"
-    print("Lots of Matches")
-    call(T, P)
+            T = "stringstringstringstringstring"
+            P = "string"
+            print("Lots of Matches")
+            call(T, P)
 
-    T = "strindstrindstrindstrindstrind"
-    P = "string"
-    print("No Matches")
-    call(T, P)
-
-    print("Long Text Datasets: ")
-    # Length of Shakespear 5458199
-    file1 = open("Shakespear.txt", "r+")
-    print("Shake Spear")
-    T = file1.read()
-    P = input("Enter a string: ")
-    call(T, P)
-
-    # Length of bee movie 86091
-    file1 = open("Bee_movie.txt", "r+")
-    print("Bee Movie")
-    T = file1.read()
-    P = input("Enter a string: ")
-    call(T, P)
-
-    # Length of bee movie 86091
-    file1 = open("Bee_movie.txt", "r+")
-    print("Bee Movie")
-    T = file1.read()
-    P = input("Enter a string: ")
-    call(T, P)
-
-    # Length of bee movie 86091
-    file3 = open("The Lottery.txt", "r+", encoding="utf-8")
-    print("The Lottery")
-    T = file1.read()
-    P = input("Enter a string: ")
-    call(T, P)
+            T = "strindstrindstrindstrindstrind"
+            P = "string"
+            print("No Matches")
+            call(T, P)    
