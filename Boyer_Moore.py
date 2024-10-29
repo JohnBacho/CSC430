@@ -29,7 +29,7 @@ if __name__ == '__main__':
     start = time.time()
     search(txt, pat)
     end = time.time()
-    print("Shake Spear: ",end - start)
+    print("Worst case ",end - start)
 
     # Length of bee movie 86091
     file2 = open("Bee_movie.txt", "r+")
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     start = time.time()
     search(txt, pat)
     end = time.time()
-    print("Bee moive: ",end - start)
+    print("Average case ",end - start)
 
     # length of the Lottery 20049
     file3 = open("The Lottery.txt", "r+", encoding="utf-8")
@@ -45,4 +45,4 @@ if __name__ == '__main__':
     start = time.time()
     search(txt, pat)
     end = time.time()
-    print("The Lottery: ",end - start)
+    print("Best Case ",end - start)
