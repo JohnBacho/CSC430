@@ -23,16 +23,16 @@ def charMismatch(string, size):
 if __name__ == '__main__':
 
     # Length of Shakespear 5458199
-    file1 = open("Shakespear.txt", "r+")
+    file1 = open("worst_case_brute_force.txt", "r+")
     txt = file1.read()
-    pat = input("Enter a string: ")
+    pat = "string"
     start = time.time()
     search(txt, pat)
     end = time.time()
     print("Worst case ",end - start)
 
     # Length of bee movie 86091
-    file2 = open("Bee_movie.txt", "r+")
+    file2 = open("worst_case_brute_force.txt", "r+")
     txt = file2.read()
     start = time.time()
     search(txt, pat)
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     print("Average case ",end - start)
 
     # length of the Lottery 20049
-    file3 = open("The Lottery.txt", "r+", encoding="utf-8")
+    file3 = open("best_case_all_matches_brute_force.txt", "r+", encoding="utf-8")
     txt = file3.read()
     start = time.time()
     search(txt, pat)
