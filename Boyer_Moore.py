@@ -21,28 +21,27 @@ def charMismatch(string, size):
     return Characters
  
 if __name__ == '__main__':
+    pat = "string"
+    with open("worst_case_brute_force.txt", "r") as file1:
+        worst_case_txt = file1.read()
+        
+    with open("average_case_brute_force.txt", "r") as file2:
+        average_case_txt = file2.read()
+        
+    with open("best_case_all_matches_brute_force.txt", "r") as file3:
+        best_case_txt = file3.read()
 
-    # Length of Shakespear 5458199
-    file1 = open("Shakespear.txt", "r+")
-    txt = file1.read()
-    pat = input("Enter a string: ")
     start = time.time()
-    search(txt, pat)
+    search(worst_case_txt, pat)
     end = time.time()
-    print("Worst case ",end - start)
+    print("Worst:   ", end - start)
 
-    # Length of bee movie 86091
-    file2 = open("Bee_movie.txt", "r+")
-    txt = file2.read()
     start = time.time()
-    search(txt, pat)
+    search(average_case_txt, pat)
     end = time.time()
-    print("Average case ",end - start)
+    print("Average: ", end - start)
 
-    # length of the Lottery 20049
-    file3 = open("The Lottery.txt", "r+", encoding="utf-8")
-    txt = file3.read()
     start = time.time()
-    search(txt, pat)
+    search(best_case_txt, pat)
     end = time.time()
-    print("Best Case ",end - start)
+    print("Best:    ", end - start)
