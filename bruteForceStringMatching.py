@@ -24,54 +24,54 @@ def call(T, P):
 #############################################################################################################################
 
 if __name__ == '__main__':
-    print("[0] Shakespear\n[1] Bee Movie\n[2] The Lottery")
+    print("[0] best_case\n[1] average_case\n[2] The Lottery")
     type = input("Which dataset would you like to run? \nEnter an Int: ")
     match type:
         case '0':
-            print("\n*** running on shakespear dataset, Length = 5458199 ***")
+            print("\n*** running on best case dataset ***")
             print("Long Text Datasets: ")
-            file = open("Shakespear.txt", "r+")
-            print("Shakespear")
+            file = open("best_case_all_matches_brute_force.txt", "r+")
+            print("best case: P = string")
             T = file.read()
-            P = input("Enter a string: ")
+            P = "string"
             call(T, P)
         case '1':
-            print("\n*** running bee movie script, Length = 86091 ***")
-            file = open("Bee_movie.txt", "r+")
-            print("Bee Movie")
+            print("\n*** running average case dataset ***")
+            file = open("average_case_brute_force.txt", "r+")
+            print("average case: P = string")
             T = file.read()
-            P = input("Enter a string: ")
+            P = "string"
             call(T, P)
         case '2':
-            print("\n*** running on The Lottery dataset, Length = 86091 ***")
-            file = open("The Lottery.txt", "r+", encoding="utf-8")
-            print("The Lottery")
+            print("\n*** running on worst case dataset ***")
+            file = open("worst_case_brute_force.txt", "r+", encoding="utf-8")
+            print("worst case: P = string")
             T = file.read()
-            P = input("Enter a string: ")
+            P = "string"
             call(T, P)
         case _:
             print("\n*** running default test cases ***")
             T = "stringstrindstrindstrindstrind"
             P = "string"
-            print("Match at Front")
+            print("Match at Front: P = string")
             call(T, P)
 
             T = "strindstrindstrindstrindstring"
             P = "string"
-            print("Match at End")
+            print("Match at End: P = string")
             call(T, P)
 
             T = "strindstrindstringstrindstrind"
             P = "string"
-            print("Match in Middle")
+            print("Match in Middle: P = string")
             call(T, P)
 
             T = "stringstringstringstringstring"
             P = "string"
-            print("Lots of Matches")
+            print("Lots of Matches: P = string")
             call(T, P)
 
             T = "strindstrindstrindstrindstrind"
             P = "string"
-            print("No Matches")
+            print("No Matches: P = string")
             call(T, P)    
