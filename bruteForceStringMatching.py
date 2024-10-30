@@ -24,7 +24,7 @@ def call(T, P):
 #############################################################################################################################
 
 if __name__ == '__main__':
-    print("[0] best_case\n[1] average_case\n[2] The Lottery")
+    print("[0] best_case\n[1] average_case\n[2] worst_case")
     type = input("Which dataset would you like to run? \nEnter an Int: ")
     match type:
         case '0':
