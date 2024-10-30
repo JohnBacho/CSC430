@@ -29,7 +29,6 @@ if __name__ == '__main__':
     match type:
         case '0':
             print("\n*** running on best case dataset ***")
-            print("Long Text Datasets: ")
             file = open("best_case_all_matches_brute_force.txt", "r+")
             print("best case: P = string")
             T = file.read()
