@@ -21,25 +21,27 @@ def charMismatch(string, size):
     return Characters
  
 if __name__ == '__main__':
-
-    file1 = open("worst_case_brute_force.txt", "r+")
-    txt = file1.read()
     pat = "string"
-    start = time.time()
-    search(txt, pat)
-    end = time.time()
-    print("Worst:   ",end - start)
+    with open("worst_case_brute_force.txt", "r") as file1:
+        worst_case_txt = file1.read()
+        
+    with open("average_case_brute_force.txt", "r") as file2:
+        average_case_txt = file2.read()
+        
+    with open("best_case_all_matches_brute_force.txt", "r") as file3:
+        best_case_txt = file3.read()
 
-    file2 = open("average_case_brute_force.txt", "r+")
-    txt = file2.read()
-    start2 = time.time()
-    search(txt, pat)
-    end2 = time.time()
-    print("Average: ",end2 - start2)
-
-    file3 = open("best_case_all_matches_brute_force.txt", "r+")
-    txt = file3.read()
     start = time.time()
-    search(txt, pat)
+    search(worst_case_txt, pat)
     end = time.time()
-    print("Best:    ",end - start)
+    print("Worst:   ", end - start)
+
+    start = time.time()
+    search(average_case_txt, pat)
+    end = time.time()
+    print("Average: ", end - start)
+
+    start = time.time()
+    search(best_case_txt, pat)
+    end = time.time()
+    print("Best:    ", end - start)
