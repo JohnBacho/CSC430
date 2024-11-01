@@ -29,24 +29,24 @@ if __name__ == '__main__':
     match type:
         case '0':
             print("\n*** running on best case dataset ***")
-            file = open("best_case_all_matches_brute_force.txt", "r+")
-            print("best case: P = string")
+            file = open("The Lottery.txt", "r+")
+            print("The Lottery: P = string")
             T = file.read()
-            P = "string"
+            P = "the"
             call(T, P)
         case '1':
             print("\n*** running average case dataset ***")
-            file = open("average_case_brute_force.txt", "r+")
-            print("average case: P = string")
+            file = open("Bee_movie.txt", "r+")
+            print("Bee movie: P = string")
             T = file.read()
-            P = "string"
+            P = "the"
             call(T, P)
         case '2':
             print("\n*** running on worst case dataset ***")
-            file = open("worst_case_brute_force.txt", "r+", encoding="utf-8")
-            print("worst case: P = string")
+            file = open("Shakespear.txt", "r+", encoding="utf-8")
+            print("Shakespear: P = string")
             T = file.read()
-            P = "string"
+            P = "the"
             call(T, P)
         case _:
             print("\n*** running default test cases ***")

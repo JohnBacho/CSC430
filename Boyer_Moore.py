@@ -57,7 +57,7 @@ def boyer_moore_search(text, pattern):
             j -= 1
         
         if j < 0:
-            print(f"Pattern found at index {s}")
+            # print(f"Pattern found at index {s}")
             s += good_suffix[0]  
         else:
             # Compute the shifts
@@ -66,32 +66,28 @@ def boyer_moore_search(text, pattern):
             s += max(bad_symbol_shift, good_suffix_shift)
 
 if __name__ == '__main__':
-    with open("worst_case_brute_force.txt", "r") as file1:
+    with open("Shakespear.txt", "r+") as file1:
         worst_case_txt = file1.read()
         
-    with open("average_case_brute_force.txt", "r") as file2:
+    with open("Bee_movie.txt", "r+") as file2:
         average_case_txt = file2.read()
         
-    with open("best_case_all_matches_brute_force.txt", "r") as file3:
+    with open("The Lottery.txt", "r+") as file3:
         best_case_txt = file3.read()
 
-    pat_worst = "string"
+    pat = "the"
     
     start = time.time()
-    worst_matches = boyer_moore_search(worst_case_txt, pat_worst)
+    worst_matches = boyer_moore_search(worst_case_txt, pat)
     end = time.time()
-    print("Worst case time:   ", end - start)
-    print("Matches in worst case:", worst_matches)
-
-    pat_average = "string"
-    start = time.time()
-    average_matches = boyer_moore_search(average_case_txt, pat_average)
-    end = time.time()
-    print("Average case time: ", end - start)
-    print("Matches in average case:", average_matches)
+    print("Shakespear:   ", end - start)
 
     start = time.time()
-    best_matches = boyer_moore_search(best_case_txt, pat_average)
+    average_matches = boyer_moore_search(average_case_txt, pat)
     end = time.time()
-    print("Best case time:    ", end - start)
-    print("Matches in best case:", best_matches)
+    print("Bee Movie: ", end - start)
+
+    start = time.time()
+    best_matches = boyer_moore_search(best_case_txt, pat)
+    end = time.time()
+    print("The Lottery:    ", end - start)

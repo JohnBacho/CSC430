@@ -30,8 +30,6 @@ def RabinKarpSearch(pat, txt, q):
                     j += 1
  
             # if p == t and pat[0...M-1] = txt[i, i+1, ...i+M-1]
-            if j == M:
-                print("Pattern found at index " + str(i))
  
         # Calculate hash value for next window of text: Remove leading digit, add trailing digit
         if i < N-M:
@@ -42,14 +40,14 @@ def RabinKarpSearch(pat, txt, q):
                 t = t + q
  
 if __name__ == '__main__':
-    with open("worst_case_brute_force.txt", "r") as file1:
+    with open("Shakespear.txt", "r") as file1:
         worst_case_txt = file1.read()
-    with open("average_case_brute_force.txt", "r") as file2:
+    with open("Bee_movie.txt", "r") as file2:
         average_case_txt = file2.read()
-    with open("best_case_all_matches_brute_force.txt", "r") as file3:
+    with open("The Lottery.txt", "r") as file3:
         best_case_txt = file3.read()
     
-    pat = "string"
+    pat = "the"
  
     # A prime number
     q = 101
@@ -58,19 +56,19 @@ if __name__ == '__main__':
     start1 = time.time()
     RabinKarpSearch(pat, worst_case_txt, q)
     end1 = time.time()
-    print("Worst case:")
+    print("Shakespear:")
     print("Total time elapsed: ", end1 - start1)
 
     # Function Call for average case
     start2 = time.time()
     RabinKarpSearch(pat, average_case_txt, q)
     end2 = time.time()
-    print("Average case:")
+    print("Bee Movie:")
     print("Total time elapsed: ", end2 - start2)
 
     # Function Call for best case
     start3 = time.time()
     RabinKarpSearch(pat, best_case_txt, q)
     end3 = time.time()
-    print("Best case:")
+    print("The Lottery:")
     print("Total time elapsed: ", end3 - start3)
