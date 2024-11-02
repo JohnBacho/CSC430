@@ -53,22 +53,22 @@ if __name__ == '__main__':
     q = 101
  
     # Function Call for worst case
-    start1 = time.time()
+    start1 = time.process_time()  # Measure CPU time
     RabinKarpSearch(pat, worst_case_txt, q)
-    end1 = time.time()
+    end1 = time.process_time()  # Measure CPU time
     print("Shakespear:")
-    print("Total time elapsed: ", end1 - start1)
+    print("CPU Time: ", end1 - start1)  # Display CPU time used
 
     # Function Call for average case
-    start2 = time.time()
+    start2 = time.process_time()  # Measure CPU time
     RabinKarpSearch(pat, average_case_txt, q)
-    end2 = time.time()
+    end2 = time.process_time()  # Measure CPU time
     print("Bee Movie:")
-    print("Total time elapsed: ", end2 - start2)
+    print("CPU Time: ", end2 - start2)  # Display CPU time used
 
     # Function Call for best case
-    start3 = time.time()
+    start3 = time.process_time()  # Measure CPU time
     RabinKarpSearch(pat, best_case_txt, q)
-    end3 = time.time()
+    end3 = time.process_time()  # Measure CPU time
     print("The Lottery:")
-    print("Total time elapsed: ", end3 - start3)
+    print("CPU Time: ", end3 - start3)  # Display CPU time used

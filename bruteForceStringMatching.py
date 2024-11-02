@@ -14,12 +14,12 @@ def BruteForceStringMatch(T, P):
     return result
 
 def call(T, P):
-    start = time.time()
+    start = time.process_time()
     match = BruteForceStringMatch(T, P)
-    end = time.time()
+    end = time.process_time()  # Measure CPU time
     print("Matches:", match, "\n")
     print("# Matches:", len(match), "\n")
-    print("Time: ", end - start)
+    print("CPU Time: ", end - start)
 
 #############################################################################################################################
 

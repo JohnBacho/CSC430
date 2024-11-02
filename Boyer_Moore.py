@@ -1,4 +1,5 @@
 import time
+
 def bad_symbol_table(pattern):
     table = {}
     m = len(pattern)
@@ -57,7 +58,7 @@ def boyer_moore_search(text, pattern):
             j -= 1
         
         if j < 0:
-            # print(f"Pattern found at index {s}")
+            # Uncomment for debugging: print(f"Pattern found at index {s}")
             s += good_suffix[0]  
         else:
             # Compute the shifts
@@ -66,28 +67,31 @@ def boyer_moore_search(text, pattern):
             s += max(bad_symbol_shift, good_suffix_shift)
 
 if __name__ == '__main__':
-    with open("Shakespear.txt", "r+") as file1:
+    with open("Shakespear.txt", "r") as file1:
         worst_case_txt = file1.read()
         
-    with open("Bee_movie.txt", "r+") as file2:
+    with open("Bee_movie.txt", "r") as file2:
         average_case_txt = file2.read()
         
-    with open("The Lottery.txt", "r+") as file3:
+    with open("The Lottery.txt", "r") as file3:
         best_case_txt = file3.read()
 
     pat = "the"
     
-    start = time.time()
+    # Measure CPU time for worst case
+    start = time.process_time()
     worst_matches = boyer_moore_search(worst_case_txt, pat)
-    end = time.time()
-    print("Shakespear:   ", end - start)
+    end = time.process_time()
+    print("Shakespear CPU Time:   ", end - start)
 
-    start = time.time()
+    # Measure CPU time for average case
+    start = time.process_time()
     average_matches = boyer_moore_search(average_case_txt, pat)
-    end = time.time()
-    print("Bee Movie: ", end - start)
+    end = time.process_time()
+    print("Bee Movie CPU Time: ", end - start)
 
-    start = time.time()
+    # Measure CPU time for best case
+    start = time.process_time()
     best_matches = boyer_moore_search(best_case_txt, pat)
-    end = time.time()
-    print("The Lottery:    ", end - start)
+    end = time.process_time()
+    print("The Lottery CPU Time:    ", end - start)
