@@ -36,7 +36,7 @@ if __name__ == '__main__':
             call(T, P)
         case '1':
             print("\n*** running average case dataset ***")
-            file = open("Bee_movie.txt", "r+")
+            file = open("titanic.txt", "r+")
             print("Bee movie: P = string")
             T = file.read()
             P = "the"

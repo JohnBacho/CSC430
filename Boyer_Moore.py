@@ -70,7 +70,7 @@ if __name__ == '__main__':
     with open("Shakespear.txt", "r") as file1:
         worst_case_txt = file1.read()
         
-    with open("Bee_movie.txt", "r") as file2:
+    with open("titanic.txt", "r") as file2:
         average_case_txt = file2.read()
         
     with open("The Lottery.txt", "r") as file3:
