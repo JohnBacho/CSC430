@@ -68,30 +68,30 @@ def boyer_moore_search(text, pattern):
 
 if __name__ == '__main__':
     with open("Shakespear.txt", "r") as file1:
-        worst_case_txt = file1.read()
+        shakespear = file1.read()
         
     with open("titanic.txt", "r") as file2:
-        average_case_txt = file2.read()
+        titanic = file2.read()
         
     with open("The Lottery.txt", "r") as file3:
-        best_case_txt = file3.read()
+        lottery = file3.read()
 
     pat = "the"
     
     # Measure CPU time for worst case
     start = time.process_time()
-    worst_matches = boyer_moore_search(worst_case_txt, pat)
+    shakespear_matches = boyer_moore_search(shakespear, pat)
     end = time.process_time()
     print("Shakespear CPU Time:   ", end - start)
 
     # Measure CPU time for average case
     start = time.process_time()
-    average_matches = boyer_moore_search(average_case_txt, pat)
+    titanic_matches = boyer_moore_search(titanic, pat)
     end = time.process_time()
-    print("Bee Movie CPU Time: ", end - start)
+    print("Titanic CPU Time: ", end - start)
 
     # Measure CPU time for best case
     start = time.process_time()
-    best_matches = boyer_moore_search(best_case_txt, pat)
+    lottery_matches = boyer_moore_search(lottery, pat)
     end = time.process_time()
     print("The Lottery CPU Time:    ", end - start)
