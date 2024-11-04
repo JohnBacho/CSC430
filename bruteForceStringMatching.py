@@ -28,23 +28,23 @@ if __name__ == '__main__':
     type = input("Which dataset would you like to run? \nEnter an Int: ")
     match type:
         case '0':
-            print("\n*** running on best case dataset ***")
+            print("\n*** running the Lottery dataset ***")
             file = open("The Lottery.txt", "r+")
-            print("The Lottery: P = string")
+            print("The Lottery: P = the")
             T = file.read()
             P = "the"
             call(T, P)
         case '1':
-            print("\n*** running average case dataset ***")
+            print("\n*** running the Titanic dataset ***")
             file = open("titanic.txt", "r+")
-            print("Bee movie: P = string")
+            print("Bee movie: P = the")
             T = file.read()
             P = "the"
             call(T, P)
         case '2':
-            print("\n*** running on worst case dataset ***")
+            print("\n*** running the Shakespear dataset ***")
             file = open("Shakespear.txt", "r+", encoding="utf-8")
-            print("Shakespear: P = string")
+            print("Shakespear: P = the")
             T = file.read()
             P = "the"
             call(T, P)
