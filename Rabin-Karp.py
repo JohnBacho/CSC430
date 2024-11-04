@@ -41,11 +41,11 @@ def RabinKarpSearch(pat, txt, q):
  
 if __name__ == '__main__':
     with open("Shakespear.txt", "r") as file1:
-        worst_case_txt = file1.read()
+        shakespear = file1.read()
     with open("titanic.txt", "r") as file2:
-        average_case_txt = file2.read()
+        titanic = file2.read()
     with open("The Lottery.txt", "r") as file3:
-        best_case_txt = file3.read()
+        lottery = file3.read()
     
     pat = "the"
  
@@ -54,21 +54,21 @@ if __name__ == '__main__':
  
     # Function Call for worst case
     start1 = time.process_time()  # Measure CPU time
-    RabinKarpSearch(pat, worst_case_txt, q)
+    RabinKarpSearch(pat, shakespear, q)
     end1 = time.process_time()  # Measure CPU time
     print("Shakespear:")
     print("CPU Time: ", end1 - start1)  # Display CPU time used
 
     # Function Call for average case
     start2 = time.process_time()  # Measure CPU time
-    RabinKarpSearch(pat, average_case_txt, q)
+    RabinKarpSearch(pat, titanic, q)
     end2 = time.process_time()  # Measure CPU time
-    print("Bee Movie:")
+    print("Titanic:")
     print("CPU Time: ", end2 - start2)  # Display CPU time used
 
     # Function Call for best case
     start3 = time.process_time()  # Measure CPU time
-    RabinKarpSearch(pat, best_case_txt, q)
+    RabinKarpSearch(pat, lottery, q)
     end3 = time.process_time()  # Measure CPU time
     print("The Lottery:")
     print("CPU Time: ", end3 - start3)  # Display CPU time used
