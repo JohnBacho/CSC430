@@ -17,60 +17,70 @@ def call(T, P):
     start = time.process_time()
     match = BruteForceStringMatch(T, P)
     end = time.process_time()  # Measure CPU time
-    print("Matches:", match, "\n")
-    print("# Matches:", len(match), "\n")
+    # print("Matches:", match, "\n")
+    # print("# Matches:", len(match), "\n")
     print("CPU Time: ", end - start)
 
 #############################################################################################################################
 
 if __name__ == '__main__':
-    print("[0] Lottery\n[1] Titanic\n[2] Shakespear")
-    type = input("Which dataset would you like to run? \nEnter an Int: ")
-    match type:
-        case '0':
-            print("\n*** running the Lottery dataset ***")
-            file = open("The Lottery.txt", "r+")
-            print("The Lottery: P = the")
-            T = file.read()
-            P = "the"
-            call(T, P)
-        case '1':
-            print("\n*** running the Titanic dataset ***")
-            file = open("titanic.txt", "r+")
-            print("Bee movie: P = the")
-            T = file.read()
-            P = "the"
-            call(T, P)
-        case '2':
-            print("\n*** running the Shakespear dataset ***")
-            file = open("Shakespear.txt", "r+", encoding="utf-8")
-            print("Shakespear: P = the")
-            T = file.read()
-            P = "the"
-            call(T, P)
-        case _:
-            print("\n*** running default test cases ***")
-            T = "stringstrindstrindstrindstrind"
-            P = "string"
-            print("Match at Front: P = string")
-            call(T, P)
+    lottery = open("The Lottery.txt", "r+")
+    titanic = open("titanic.txt", "r+")
+    shakespear = open("Shakespear.txt", "r+", encoding="utf-8")
+    p = "the"
 
-            T = "strindstrindstrindstrindstring"
-            P = "string"
-            print("Match at End: P = string")
-            call(T, P)
+    print("Shakespear:")
+    call(shakespear.read(), p)
+    print("Titanic:")
+    call(titanic.read(), p)
+    print("Lottery:")
+    call(lottery.read(), p)
 
-            T = "strindstrindstringstrindstrind"
-            P = "string"
-            print("Match in Middle: P = string")
-            call(T, P)
+    # print("[0] Lottery\n[1] Titanic\n[2] Shakespear")
+    # type = input("Which dataset would you like to run? \nEnter an Int: ")
+    # match type:
+    #     case '0':
+    #         print("\n*** running the Lottery dataset ***")
+    #         print("The Lottery: P = the")
+    #         T = lottery.read()
+    #         P = "the"
+    #         call(T, P)
+    #     case '1':
+    #         print("\n*** running the Titanic dataset ***")
+    #         file = open("titanic.txt", "r+")
+    #         print("Titanic: P = the")
+    #         T = titanic.read()
+    #         P = "the"
+    #         call(T, P)
+    #     case '2':
+    #         print("\n*** running the Shakespear dataset ***")
+    #         print("Shakespear: P = the")
+    #         T = shakespear.read()
+    #         P = "the"
+    #         call(T, P)
+    #     case _:
+    #         print("\n*** running default test cases ***")
+    #         T = "stringstrindstrindstrindstrind"
+    #         P = "string"
+    #         print("Match at Front: P = string")
+    #         call(T, P)
 
-            T = "stringstringstringstringstring"
-            P = "string"
-            print("Lots of Matches: P = string")
-            call(T, P)
+    #         T = "strindstrindstrindstrindstring"
+    #         P = "string"
+    #         print("Match at End: P = string")
+    #         call(T, P)
 
-            T = "strindstrindstrindstrindstrind"
-            P = "string"
-            print("No Matches: P = string")
-            call(T, P)    
+    #         T = "strindstrindstringstrindstrind"
+    #         P = "string"
+    #         print("Match in Middle: P = string")
+    #         call(T, P)
+
+    #         T = "stringstringstringstringstring"
+    #         P = "string"
+    #         print("Lots of Matches: P = string")
+    #         call(T, P)
+
+    #         T = "strindstrindstrindstrindstrind"
+    #         P = "string"
+    #         print("No Matches: P = string")
+    #         call(T, P)    
