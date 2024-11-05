@@ -29,6 +29,7 @@ if __name__ == '__main__':
     shakespear = open("Shakespear.txt", "r+", encoding="utf-8")
     p = "the"
 
+    print("BRUTE FORCE STRING MATCH")
     print("Shakespear:")
     call(shakespear.read(), p)
     print("Titanic:")

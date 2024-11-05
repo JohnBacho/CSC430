@@ -78,6 +78,7 @@ if __name__ == '__main__':
 
     pat = "the"
     
+    print("BOYER MOORE STRING MATCH")
     # Measure CPU time for worst case
     start = time.process_time()
     shakespear_matches = boyer_moore_search(shakespear, pat)

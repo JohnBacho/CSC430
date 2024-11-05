@@ -52,6 +52,7 @@ if __name__ == '__main__':
     # A prime number
     q = 101
  
+    print("RABIN KARP STRING MATCH")
     # Function Call for worst case
     start1 = time.process_time()  # Measure CPU time
     RabinKarpSearch(pat, shakespear, q)
